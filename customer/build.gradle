@@ -9,8 +9,12 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
+ext {
+    springBootVersion = "2.7.4"
+}
 
+dependencies {
+    implementation "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
 }
 
 test {
