@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CustomerService {
-   CustomerRepository customerRepository;
+   private final CustomerRepository customerRepository;
 
    @Autowired
    public CustomerService(CustomerRepository customerRepository) {
@@ -19,6 +19,10 @@ public class CustomerService {
                 .lastName(request.getLastName())
                 .email(request.getEmail())
                 .build();
+
+        // todo: Check if email valid
+        // todo: check if email not taken
+        // todo: check if fraudster
 
         customerRepository.save(customer);
     }
