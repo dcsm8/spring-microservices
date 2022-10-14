@@ -9,22 +9,12 @@ repositories {
     mavenCentral()
 }
 
-ext {
-    springBootVersion = "2.7.4"
-    lombokVersion = "1.18.24"
-    postgresqlVersion = "42.5.0"
-    springCloudVersion = "3.1.4"
-}
-
 dependencies {
-    implementation "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
-    implementation "org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}"
-    runtimeOnly "org.postgresql:postgresql:${postgresqlVersion}"
-    compileOnly "org.projectlombok:lombok:${lombokVersion}"
-    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
-    compileOnly "org.springframework.cloud:spring-cloud-starter-config:${springCloudVersion}"
-    compileOnly "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:${springCloudVersion}"
-    compileOnly "org.springframework.cloud:spring-cloud-starter-bootstrap:${springCloudVersion}"
+    runtimeOnly "org.postgresql:postgresql"
+    compileOnly "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client"
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation "org.springframework.boot:spring-boot-starter-data-jpa"
+    testImplementation "org.springframework.boot:spring-boot-starter-test"
 }
 
 test {

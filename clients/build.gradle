@@ -9,15 +9,7 @@ repositories {
     mavenCentral()
 }
 
-ext {
-    lombokVersion = "1.18.24"
-    springCloudVersion = "3.1.4"
-}
-
 dependencies {
-    implementation "org.springframework.cloud:spring-cloud-starter-openfeign:${springCloudVersion}"
-    compileOnly "org.projectlombok:lombok:${lombokVersion}"
-    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 }
 
 test {
