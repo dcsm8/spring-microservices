@@ -21,6 +21,7 @@ subprojects {
 
     apply plugin: 'io.spring.dependency-management'
     apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
 
     dependencies {
         implementation "org.springframework.cloud:spring-cloud-starter-openfeign:${springCloudVersion}"
