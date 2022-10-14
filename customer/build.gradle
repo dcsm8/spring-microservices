@@ -13,6 +13,7 @@ ext {
     springBootVersion = "2.7.4"
     lombokVersion = "1.18.24"
     postgresqlVersion = "42.5.0"
+    springCloudVersion = "3.1.4"
 }
 
 dependencies {
@@ -21,6 +22,10 @@ dependencies {
     runtimeOnly "org.postgresql:postgresql:${postgresqlVersion}"
     compileOnly "org.projectlombok:lombok:${lombokVersion}"
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    compileOnly "org.springframework.cloud:spring-cloud-starter-config:${springCloudVersion}"
+    compileOnly "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:${springCloudVersion}"
+    compileOnly "org.springframework.cloud:spring-cloud-starter-bootstrap:${springCloudVersion}"
+    implementation project(':clients')
 }
 
 test {
