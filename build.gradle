@@ -28,6 +28,7 @@ subprojects {
         implementation "org.projectlombok:lombok:${lombokVersion}"
         annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
         compileOnly 'org.springframework.cloud:spring-cloud-starter-sleuth'
+        compileOnly 'org.springframework.cloud:spring-cloud-sleuth-zipkin'
     }
 
     dependencyManagement {
