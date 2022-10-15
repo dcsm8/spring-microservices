@@ -27,6 +27,7 @@ subprojects {
         implementation "org.springframework.cloud:spring-cloud-starter-openfeign:${springCloudVersion}"
         implementation "org.projectlombok:lombok:${lombokVersion}"
         annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+        compileOnly 'org.springframework.cloud:spring-cloud-starter-sleuth'
     }
 
     dependencyManagement {
