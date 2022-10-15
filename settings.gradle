@@ -3,4 +3,5 @@ include 'customer'
 include 'fraud'
 include 'eureka-server'
 include 'clients'
+include 'notification'
 
