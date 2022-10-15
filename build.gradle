@@ -17,6 +17,7 @@ subprojects {
         springCloudVersion = "3.1.4"
         lombokVersion = "1.18.24"
         springCloudDependenciesVersion = "2021.0.4"
+        p6spyVersion = "3.9.1"
     }
 
     apply plugin: 'io.spring.dependency-management'
@@ -29,6 +30,7 @@ subprojects {
         annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
         compileOnly 'org.springframework.cloud:spring-cloud-starter-sleuth'
         compileOnly 'org.springframework.cloud:spring-cloud-sleuth-zipkin'
+        runtimeOnly "p6spy:p6spy:${p6spyVersion}"
     }
 
     dependencyManagement {
